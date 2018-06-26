@@ -1,0 +1,6 @@
+framework module UOASmartHomeSDK {
+  umbrella header "UOASmartHomeSDK.h"
+
+  export *
+  module * { export * }
+}
