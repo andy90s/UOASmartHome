@@ -65,14 +65,16 @@ typedef void(^failer)(NSDictionary *jsonDictionary);
 - (void)checkUniqueAdmin:(NSString *)gateway callBack:(success)success failer:(failer)falier;
 
 
+
 /**
  解除绑定网关
 
  @param gateway 网关标识
+ @param userName 用户名
  */
-- (void)unbindGateway:(NSString *)gateway gatewayName:(NSString *)gatewayName;
+- (void)unbindGateway:(NSString *)gateway userName:(NSString *)userName;
 
-- (void)unbindGateway:(NSString *)gateway gatewayName:(NSString *)gatewayName callBack:(success)success failer:(failer)falier;
+- (void)unbindGateway:(NSString *)gateway userName:(NSString *)userName callBack:(success)success failer:(failer)falier;
 
 /**
  修改网关别名
