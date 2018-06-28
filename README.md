@@ -71,6 +71,17 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
 ```
 返回参数|类别|说明|备注
 ---|---|---|---
+authority|int|权限|
+gateway|string|网关ID
+gateways|jsonArray|绑定网关列表
+name|string|网关别名
+
+#### 所有返回head参数说明
+返回参数|类别|说明|备注
+---|---|---|---
+proto_version|string|协议版本号
+status|int|返回状态码|详细状态码查看文档第5条
+ts|string|时间戳
 #### 示例说明
 ```
 [UOAUserManager.manager loginUserName:@"username" password:@"password" callBack:^(NSDictionary *jsonDictionary) {
@@ -208,6 +219,8 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
 ```
 返回参数|类别|说明|备注
 ---|---|---|---
+gateway|string|网关ID|
+name|string|网关名称
 #### 3.2.3 绑定网关
 ```
 /**
@@ -221,8 +234,6 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
 ```
 返回参数|类别|说明|备注
 ---|---|---|---
-method|string|请求码|1003
-
 #### 3.2.4 获取网关列表
 ```
 /**
@@ -232,6 +243,10 @@ method|string|请求码|1003
 ```
 返回参数|类别|说明|备注
 ---|---|---|---
+firmware|string|网关硬件版本
+software|string|网关软件版本
+alarm|int|网关下是否布防|0撤防 1布防
+authority|int|管理员权限|
 #### 3.2.5 检测唯一管理员
 ```
 /**
@@ -271,7 +286,7 @@ only_admin|int|是否管理员|1-是0-不是
 ---|---|---|---
 
 ### 3.3 设备模块
-#### 3.3.1 获取设备组列表
+#### 3.3.1 获取设备组列表(此接口合并到3.3.5)
 ```
 /**
  获取设备组列表
@@ -281,6 +296,7 @@ only_admin|int|是否管理员|1-是0-不是
 ```
 返回参数|类别|说明|备注
 ---|---|---|---
+
 #### 3.3.2 添加设备组
 ```
 /**
@@ -299,7 +315,7 @@ only_admin|int|是否管理员|1-是0-不是
 /**
  删除设备组
 
- @param groupid 组名
+ @param groupid 设备组ID
  */
 
 - (void)deleteDeviceGroup:(NSInteger)groupid CallBack:(success)success failer:(failer)failer;
@@ -319,7 +335,7 @@ only_admin|int|是否管理员|1-是0-不是
 ```
 返回参数|类别|说明|备注
 ---|---|---|---
-#### 3.3.5 获取设备列表
+#### 3.3.5 获取设备(组)列表
 ```
 /**
  获取设备列表
@@ -339,6 +355,14 @@ device\_only_type |string|设备类型|设备类型表见第4条
 
 - (void)searchDeviceCallBack:(success)success failer:(failer)failer;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
+mac|string|设备MAC|
+gateway|string|网关ID|
+id|int|设备ID
+name|string|设备名
+device\_only_type |string|设备类型|设备类型表见第4条
+
 #### 3.3.7 添加设备
 ```
 /**
@@ -352,6 +376,8 @@ device\_only_type |string|设备类型|设备类型表见第4条
 
 - (void)addDevice:(NSInteger )groupId devcieId:(NSInteger )deviceId deviceName:(NSString *)deviceName gateway:(NSString *)gateway CallBack:(success)success failer:(failer)failer;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 3.3.8 删除设备
 ```
 /**
@@ -363,6 +389,8 @@ device\_only_type |string|设备类型|设备类型表见第4条
 
 - (void)deleteDevice:(NSInteger )deviceId gateway:(NSString *)gateway CallBack:(success)success failer:(failer)failer;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 3.3.9 修改设备名和分组
 ```
 /**
@@ -376,6 +404,8 @@ device\_only_type |string|设备类型|设备类型表见第4条
 
 - (void)updateDeviceName:(NSInteger )groupId deviceId:(NSInteger )deviceId devcieName:(NSString *)deviceName gateway:(NSString *)gateway CallBack:(success)success failer:(failer)failer;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 3.3.10 获取设备状态
 ```
 /**
@@ -387,6 +417,31 @@ device\_only_type |string|设备类型|设备类型表见第4条
 
 - (void)getDeviceStatus:(NSInteger )deviceId gateway:(NSString *)gateway CallBack:(success)success failer:(failer)failer;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
+onoff|int|开关灯|0表示关 1表示开(所有设备onoff均是)
+|||
+level|int|冷暖灯|亮度值
+time|int|冷暖灯|渐变延时
+|||
+level|int|可调灯|亮度值
+time|int|可调灯|渐变延时
+|||
+level|int|彩色灯|亮度
+hue|int|彩色灯|色彩
+saturation|int|彩色灯|饱和度
+time|int|彩色灯|渐变延时
+|||
+onoff|int|窗帘|开关
+level|int|窗帘|位置
+stop|int|窗帘|停止
+time|int|窗帘|渐变延时
+|||
+temp|int|温湿度|温度
+hum|int|温湿度|湿度
+|||
+
+
 #### 3.3.11 控制设备
 ```
 /**
