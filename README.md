@@ -69,6 +69,8 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
  */
 - (void)loginUserName:(NSString *)userName password:(NSString *)password callBack:(success)success failer:(failer)falier;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 示例说明
 ```
 [UOAUserManager.manager loginUserName:@"username" password:@"password" callBack:^(NSDictionary *jsonDictionary) {
@@ -77,6 +79,7 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
    // 登录失败
 }];
 ```
+
 #### 3.1.2 注销登录
 ```
 /**
@@ -87,6 +90,8 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
 
 - (void)logout:(NSString *)userName callBack:(success)success failer:(failer)falier;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 
 #### 3.1.3 获取注册验证码
 
@@ -99,6 +104,8 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
 
 - (void)getRegisterCode:(NSString *)usrNumber callBack:(success)success failer:(failer)falier;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 3.1.4 验证注册验证码
 ```
 /**
@@ -110,6 +117,8 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
 
 - (void)checkRegisterCode:(NSString *)usrNumber verificationCode:(NSString *)vCode callBack:(success)success failer:(failer)falier;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 3.1.5 注册账号
 ```
 /**
@@ -121,6 +130,8 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
 
 - (void)registerAccount:(NSString *)userName password:(NSString *)password callBack:(success)success failer:(failer)falier;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 3.1.6 修改密码
 ```
 /**
@@ -133,6 +144,8 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
 
 - (void)modifyPassword:(NSString *)userName oldPassword:(NSString *)oldPassword newPassword:(NSString *)newPassword callBack:(success)success failer:(failer)falier;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 3.1.7 获取忘记密码验证码
 ```
 /**
@@ -144,6 +157,8 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
 - (void)getForgetPasswordCode:(NSString *)userName callBack:(success)success failer:(failer)falier;
 
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 3.1.8 验证忘记密码验证码
 ```
 /**
@@ -155,6 +170,8 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
 
 - (void)checkForgetPasswordCode:(NSString *)userName vCode:(NSString *)vcode callBack:(success)success failer:(failer)falier;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 3.1.9 重置密码
 ```
 /**
@@ -166,6 +183,8 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
 
 - (void)resetPassword:(NSString *)userName newPassword:(NSString *)newPassword callBack:(success)success failer:(failer)falier;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 ### 3.2 网关模块
 #### 3.2.1 网关开网（允许被其他非管理员搜索绑定）
 ```
@@ -177,6 +196,8 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
 
 - (void)allowsScanGateway:(NSString *)gateway callBack:(success)success failer:(failer)falier;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 3.2.2 搜索网关
 ```
 /**
@@ -185,6 +206,8 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
 - (void)searchGatewaycallBack:(success)success failer:(failer)falier;
 
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 3.2.3 绑定网关
 ```
 /**
@@ -196,6 +219,10 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
  - (void)bindGateway:(NSString *)gateway gatewayName:(NSString *)gatewayName userName:(NSString *)userName callBack:(success)success failer:(failer)falier;
 
 ```
+返回参数|类别|说明|备注
+---|---|---|---
+method|string|请求码|1003
+
 #### 3.2.4 获取网关列表
 ```
 /**
@@ -203,6 +230,8 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
  */
 - (void)getGatewayListCallBack:(success)success failer:(failer)falier;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 3.2.5 检测唯一管理员
 ```
 /**
@@ -300,7 +329,8 @@ only_admin|int|是否管理员|1-是0-不是
 ```
 返回参数|类别|说明|备注
 ---|---|---|---
-id	|Int|	设备组idname|	String|	组名称mac|	String|	设备MACtype|	int|	设备类型zonetype	|int	|设备子类型stamp	|int|	设备添加时间gateway|	String	|网关IDgatewayname|	String	|网关别名offline|	Int	|是否在线status	|JsonObject|	设备状态clusterid|	JsonObject|	in_clusterid	|JsonArray |设备属性out_clusterid	|JsonArray|	设备属性
+id	|Int|	设备组idname|	String|	组名称mac|	String|	设备MACtype|	int|	设备类型zonetype	|int	|设备子类型stamp	|int|	设备添加时间gateway|	String	|网关IDgatewayname|	String	|网关别名offline|	Int	|是否在线|1是离线 0是在线status	|JsonObject|	设备状态clusterid|	JsonObject|	in_clusterid	|JsonArray |设备属性out_clusterid	|JsonArray|	设备属性
+device\_only_type |string|设备类型|设备类型表见第4条
 #### 3.3.6 搜索设备
 ```
 /**
