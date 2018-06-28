@@ -226,6 +226,8 @@ only_admin|int|是否管理员|1-是0-不是
 
 - (void)unbindGateway:(NSString *)gateway userName:(NSString *)userName callBack:(success)success failer:(failer)falier;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 3.2.7 修改网关别名
 ```
 /**
@@ -236,6 +238,8 @@ only_admin|int|是否管理员|1-是0-不是
  */
 - (void)updateGatewayName:(NSString *)gatewayName gatewayID:(NSString *)gatewaytid callBack:(success)success failer:(failer)falier;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 
 ### 3.3 设备模块
 #### 3.3.1 获取设备组列表
@@ -246,6 +250,8 @@ only_admin|int|是否管理员|1-是0-不是
 
 - (void)getDeviceGroupListCallBack:(success)success failer:(failer)failer;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 3.3.2 添加设备组
 ```
 /**
@@ -256,6 +262,8 @@ only_admin|int|是否管理员|1-是0-不是
 
 - (void)addDeviceGroup:(NSString *)groupName CallBack:(success)success failer:(failer)failer;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 3.3.3 删除设备组
 ```
 
@@ -267,6 +275,8 @@ only_admin|int|是否管理员|1-是0-不是
 
 - (void)deleteDeviceGroup:(NSInteger)groupid CallBack:(success)success failer:(failer)failer;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 3.3.4 修改设备组名称
 ```
 /**
@@ -278,6 +288,8 @@ only_admin|int|是否管理员|1-是0-不是
 
 - (void)updateDeviceGroupName:(NSInteger)groupid newGroupName:(NSString *)newGroupName  CallBack:(success)success failer:(failer)failer;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
 #### 3.3.5 获取设备列表
 ```
 /**
@@ -286,6 +298,9 @@ only_admin|int|是否管理员|1-是0-不是
 
 - (void)getDeviceListCallBack:(success)success failer:(failer)failer;
 ```
+返回参数|类别|说明|备注
+---|---|---|---
+id	|Int|	设备组idname|	String|	组名称mac|	String|	设备MACtype|	int|	设备类型zonetype	|int	|设备子类型stamp	|int|	设备添加时间gateway|	String	|网关IDgatewayname|	String	|网关别名offline|	Int	|是否在线status	|JsonObject|	设备状态clusterid|	JsonObject|	in_clusterid	|JsonArray |设备属性out_clusterid	|JsonArray|	设备属性
 #### 3.3.6 搜索设备
 ```
 /**
@@ -352,7 +367,39 @@ only_admin|int|是否管理员|1-是0-不是
 
 - (void)controlDevice:(UOADevice *)device CallBack:(success)success failer:(failer)failer;
 ```
-## 4.状态码
+## 4.设备类型说明
+------------------
+返回参数|类别|值|说明|备注
+---|---|---|---|---
+device\_only_type |string|unknown|未知设备
+device\_only_type|string|DoorSensor|门磁
+device\_only_type|string|FireSensor|烟雾报警器
+device\_only_type|string|WaterSensor|水浸探测器
+device\_only_type|string|GasSensor|可燃气体
+device\_only_type|string|IRSensor|人体红外
+device\_only_type|string|SOS|SOS
+device\_only_type|string|Switch|墙面开关
+device\_only_type|string|LightSwitch|开关灯
+device\_only_type|string|DimmableLight|可调灯
+device\_only_type|string|LevelControlSwitch|调光开关
+device\_only_type|string|MobileMeterSocket|移动计量插座
+device\_only_type|string|OutLet|普通插座
+device\_only_type|string|Repeater|中继器
+device\_only_type|string|MobileOutlet|移动插座
+device\_only_type|string|TouchPanel|触摸面板
+device\_only_type|string|AudibleAndVisualAlarm|声光报警器
+device\_only_type|string|CurtainMotor|窗帘电机
+device\_only_type|string|ColorDimmableLight|彩色灯
+device\_only_type|string|HumiturePM2.5|温湿度PM2.5
+device\_only_type|string|PM2.5|PM2.5
+device\_only_type|string|IRRemoteController|红外遥控器
+device\_only_type|string|CurtainSwitch|一路窗帘开关
+device\_only_type|string|IRTransponder|红外转发器
+device\_only_type|string|AutomaticDoorController|自动门控制器
+device\_only_type|string|MusicPlayer|背景音乐
+
+
+## 5.状态码
 ------------------
 
 状态码 | 说明
