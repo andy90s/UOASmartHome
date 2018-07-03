@@ -10,7 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class UOADevice;
 typedef void(^success)(NSDictionary *jsonDictionary);
 
 typedef void(^failer)(NSDictionary *jsonDictionary);
@@ -111,14 +110,18 @@ typedef void(^failer)(NSDictionary *jsonDictionary);
 
 - (void)getDeviceStatus:(NSInteger )deviceId gateway:(NSString *)gateway CallBack:(success)success failer:(failer)failer;
 
+
 /**
  控制设备
 
- @param device 设备模型
+ @param gateway 网关标识(ID)
+ @param deviceID 设备ID
+ @param commond 设备指令(字典格式 根据设备不同指令不同 参考文档3.3.11)
  */
-- (void)controlDevice:(UOADevice *)device;
+- (void)controlDeviceWithGateway:(NSString *)gateway deviceID:(NSInteger )deviceID commond:(NSDictionary *)commond;
 
-- (void)controlDevice:(UOADevice *)device CallBack:(success)success failer:(failer)failer;
+- (void)controlDeviceWithGateway:(NSString *)gateway deviceID:(NSInteger )deviceID commond:(NSDictionary *)commond callBack:(success)success failer:(failer)failer;
+
 
 @end
 
