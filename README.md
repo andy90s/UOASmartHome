@@ -284,6 +284,17 @@ only_admin|int|是否管理员|1-是0-不是
 ```
 返回参数|类别|说明|备注
 ---|---|---|---
+#### 3.2.8 
+```
+/**
+ 消除警告(网关蜂鸣器响)
+ */
+- (void)eliminateWarning;
+
+- (void)eliminateWarningCallBack:(success)success failer:(failer)falier;
+```
+返回参数|类别|说明|备注
+---|---|---|---
 
 ### 3.3 设备模块
 #### 3.3.1 获取设备组列表(此接口合并到3.3.5)
