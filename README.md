@@ -463,6 +463,35 @@ hum|int|温湿度|湿度
 
 - (void)controlDevice:(UOADevice *)device CallBack:(success)success failer:(failer)failer;
 ```
+
+commond 字典实例:
+```
+NSDictionary *commond = @{@"onoff":@(1)};
+```
+
+参数|类别|说明|备注
+---|---|---|---
+onoff|int|开关灯|0表示关 1表示开(所有设备onoff均是)
+|||
+level|int|冷暖灯|亮度值
+time|int|冷暖灯|渐变延时
+|||
+level|int|可调灯|亮度值
+time|int|可调灯|渐变延时
+|||
+level|int|彩色灯|亮度
+hue|int|彩色灯|色彩
+saturation|int|彩色灯|饱和度
+time|int|彩色灯|渐变延时
+|||
+onoff|int|窗帘|开关
+level|int|窗帘|位置
+stop|int|窗帘|停止
+time|int|窗帘|渐变延时
+|||
+temp|int|温湿度|温度
+hum|int|温湿度|湿度
+|||
 ## 4.设备类型说明
 ------------------
 返回参数|类别|值|说明|备注
