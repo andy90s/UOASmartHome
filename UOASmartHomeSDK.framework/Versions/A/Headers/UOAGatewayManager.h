@@ -85,6 +85,15 @@ typedef void(^failer)(NSDictionary *jsonDictionary);
 - (void)updateGatewayName:(NSString *)gatewayName gatewayID:(NSString *)gatewaytid;
 
 - (void)updateGatewayName:(NSString *)gatewayName gatewayID:(NSString *)gatewaytid callBack:(success)success failer:(failer)falier;
+
+
+/**
+ 消除警告
+ */
+- (void)eliminateWarning;
+
+- (void)eliminateWarningCallBack:(success)success failer:(failer)falier;
+
 @end
 
 NS_ASSUME_NONNULL_END
