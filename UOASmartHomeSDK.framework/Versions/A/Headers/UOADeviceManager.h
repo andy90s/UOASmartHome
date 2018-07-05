@@ -122,6 +122,17 @@ typedef void(^failer)(NSDictionary *jsonDictionary);
 
 - (void)controlDeviceWithGateway:(NSString *)gateway deviceID:(NSInteger )deviceID commond:(NSDictionary *)commond callBack:(success)success failer:(failer)failer;
 
+/**
+ 读取设备历史记录
+
+ @param deviceID 设备ID
+ @param gatewayID 网关标识
+ @param start 记录起始条数,默认0开始
+ @param cnt 一次获取的条数
+ */
+- (void)getDeviceRecordsWithDeviceID:(NSInteger )deviceID gatewayID:(NSString *)gatewayID start:(NSInteger )start cnt:(NSInteger )cnt;
+
+- (void)getDeviceRecordsWithDeviceID:(NSInteger )deviceID gatewayID:(NSString *)gatewayID start:(NSInteger )start cnt:(NSInteger )cnt callBack:(success)success failer:(failer)failer;
 
 @end
 

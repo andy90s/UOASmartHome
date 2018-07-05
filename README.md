@@ -492,6 +492,20 @@ time|int|窗帘|渐变延时
 temp|int|温湿度|温度
 hum|int|温湿度|湿度
 |||
+
+#### 3.3.12 读取设备历史记录
+```
+/**
+ 读取设备历史记录
+
+ @param deviceID 设备ID
+ @param gatewayID 网关标识
+ @param start 记录起始条数,默认0开始
+ @param cnt 一次获取的条数
+ */
+- (void)getDeviceRecordsWithDeviceID:(NSInteger )deviceID gatewayID:(NSString *)gatewayID start:(NSInteger )start cnt:(NSInteger )cnt callBack:(success)success failer:(failer)failer;
+```
+
 ## 4.设备类型说明
 ------------------
 返回参数|类别|值|说明|备注
