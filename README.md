@@ -10,7 +10,7 @@
 |||
 |||
 
-
+------------------
 ## 1. 介绍
 
 ### 目标
@@ -23,6 +23,8 @@ UOA  Umeinfo Open API
 
 本文档主要分为三个部分，第一部分概要，第二部分为Open Api的详细说明。
 
+
+---------------
 ## 2. 集成步骤
 
 ### 2.1 将framework直接拖入工程
@@ -55,6 +57,8 @@ pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
 ```
 **初始化只需要在程序启动时初始化一次即可。**
 
+
+-----------------------------
 ## 3. 接口说明
 ### 3.1 用户模块
 
@@ -75,6 +79,7 @@ authority|int|权限|
 gateway|string|网关ID
 gateways|jsonArray|绑定网关列表
 name|string|网关别名
+
 
 #### 所有返回head参数说明
 返回参数|类别|说明|备注
@@ -506,6 +511,15 @@ hum|int|温湿度|湿度
 - (void)getDeviceRecordsWithDeviceID:(NSInteger )deviceID gatewayID:(NSString *)gatewayID start:(NSInteger )start cnt:(NSInteger )cnt callBack:(success)success failer:(failer)failer;
 ```
 
+参数|类别|说明|备注
+---|---|---|---
+message|string|消息记录|
+gateway_id|string|网关ID|
+device_id|int|设备ID|
+device_type|string|设备类型|
+stamp|int|时间戳
+index|int|索引
+
 ## 4.设备类型说明
 ------------------
 返回参数|类别|值|说明|备注
@@ -606,4 +620,6 @@ device\_only_type|string|MusicPlayer|背景音乐
 -0x1|未知错误
 65535|未知错误
 
+
+--------------
 
