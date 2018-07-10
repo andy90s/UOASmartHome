@@ -546,7 +546,7 @@ device\_only_type|string|ColorDimmableLight|彩色灯
 device\_only_type|string|HumiturePM2.5|温湿度PM2.5
 device\_only_type|string|PM2.5|PM2.5
 device\_only_type|string|IRRemoteController|红外遥控器
-device\_only_type|string|CurtainSwitch|一路窗帘开关
+device\_only_type|string|CurtainSwitch|一路窗帘开关|窗帘面板
 device\_only_type|string|IRTransponder|红外转发器
 device\_only_type|string|AutomaticDoorController|自动门控制器
 device\_only_type|string|MusicPlayer|背景音乐
