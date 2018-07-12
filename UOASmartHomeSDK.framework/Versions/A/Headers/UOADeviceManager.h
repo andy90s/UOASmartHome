@@ -134,6 +134,55 @@ typedef void(^failer)(NSDictionary *jsonDictionary);
 
 - (void)getDeviceRecordsWithDeviceID:(NSInteger )deviceID gatewayID:(NSString *)gatewayID start:(NSInteger )start cnt:(NSInteger )cnt callBack:(success)success failer:(failer)failer;
 
+
+/**
+ 添加新的撤布防组
+
+ @param groupName 组名
+ @param devices 安防设备数组 eg:  @[@{@"gateway":xxxx,@"id":11,@"zonetype":11},...]
+                            其中gateway-网关标识 id-设备ID zonetype-设备zonetype
+ */
+- (void)addProtectionGroupWithName:(NSString *)groupName devices:(NSArray <NSDictionary *>*)devices;
+
+- (void)addProtectionGroupWithName:(NSString *)groupName devices:(NSArray <NSDictionary *>*)devices callBack:(success)success failer:(failer)failer;
+
+/**
+ 获取账号下所有撤布防组设备
+ */
+- (void)getAllInProtectionDevices;
+
+- (void)getAllInProtectionDevicesCallBack:(success)success failer:(failer)failer;
+
+/**
+ 撤布防组的控制(撤防/布防)
+
+ @param groupID 撤布防组ID
+ @param status 撤防/布防 (1/0)
+ */
+- (void)removalOrProtectionWithGroupID:(NSInteger )groupID status:(NSInteger )status;
+
+- (void)removalOrProtectionWithGroupID:(NSInteger )groupID status:(NSInteger )status callBack:(success)success failer:(failer)failer;
+
+/**
+ 删除撤布防分组
+
+ @param groupID 撤布防分组组ID
+ */
+- (void)deleteProtectionGroup:(NSInteger )groupID;
+
+- (void)deleteProtectionGroup:(NSInteger )groupID callBack:(success)success failer:(failer)failer;
+
+/**
+ 修改撤布防分组
+
+ @param groupName 撤布防分组名
+ @param groupID 撤布防分组ID
+ @param devices 分组下的设备
+ */
+- (void)editProtectionGroup:(NSString *)groupName groupID:(NSInteger )groupID devices:(NSArray <NSDictionary *>*)devices;
+
+- (void)editProtectionGroup:(NSString *)groupName groupID:(NSInteger )groupID devices:(NSArray <NSDictionary *>*)devices callBack:(success)success failer:(failer)failer;
+
 @end
 
 NS_ASSUME_NONNULL_END
