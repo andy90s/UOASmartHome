@@ -576,6 +576,97 @@ index|int|索引
 
 - (void)editProtectionGroup:(NSString *)groupName groupID:(NSInteger )groupID devices:(NSArray <NSDictionary *>*)devices callBack:(success)success failer:(failer)failer;
 ```
+#### 3.3.18 曼顿空开读取实时参数
+```
+/**
+ 曼顿空开读取实时参数
+
+ @param gateWay 网关ID
+ @param device_id 设备ID
+ */
+
+- (void)mandun_ammeterInformationGateWay:(NSString*)gateWay device_id:(NSInteger )device_id callBack:(success)success failer:(failer)failer;
+```
+
+#### 3.3.19 曼顿空开电量统计信息
+```
+/**
+ 曼顿空开电量统计信息
+
+ @param gateWay 网关ID
+ @param device_id 设备ID
+ */
+ 
+- (void)mandun_ammeterStatisticsInformation:(NSString*)gateWay device_id:(NSInteger )device_id callBack:(success)success failer:(failer)failer;
+```
+#### 3.3.20  曼顿空开设置配置参数
+```
+/**
+ 曼顿空开设置配置参数
+
+ @param devid 设备ID
+ @param gwid 网关ID
+ @param name 设备名称
+ @param addr 曼顿路数
+ @param voltage_min 最小电压
+ @param voltage_max 最大电压
+ @param current_max 当前电压
+ @param power_max 功率
+ */
+ 
+ - (void)mandun_ammeterConfigurationParametersDevid:(NSInteger )devid gwid:(NSString *)gwid name:(NSString *)name addr:(NSInteger)addr voltage_min:(NSInteger)voltage_min voltage_max:(NSInteger)voltage_max current_max:(NSInteger)current_max power_max:(NSInteger )power_max callBack:(success)success failer:(failer)failer;
+```
+#### 3.3.21 曼顿空开自动检测
+```
+/**
+ 曼顿空开自动检测
+
+ @param devid 设备ID
+ @param gwid 网关ID
+ @param mode 检测模式
+ @param time 时间间隔
+ */
+
+- (void)mandun_ammeterConfigurationParametersDevid:(NSInteger )devid gwid:(NSString *)gwid mode:(NSInteger )mode time:(NSInteger)time callBack:(success)success failer:(failer)failer;
+```
+
+#### 3.3.22 曼顿空开读取配置参数
+```
+/**
+ 曼顿空开读取配置参数
+
+ @param devid 设备ID
+ @param gwid 网关ID
+ */
+
+
+- (void)mandun_readAmmeterConfigurationParameterDevid:(NSInteger )devid gwid:(NSString *)gwid callBack:(success)success failer:(failer)failer;
+```
+
+#### 3.3.23 手动检测曼顿设备
+```
+/**
+ 手动检测曼顿设备
+
+ @param devid 设备ID
+ @param gwid 网关ID
+ */
+
+
+- (void)mandun_manualTestDevid:(NSInteger )devid gwid:(NSString *)gwid callBack:(success)success failer:(failer)failer;
+```
+
+#### 3.3.24 自动检测曼顿设备
+```
+/**
+ 自动检测曼顿设备
+
+ @param devid 设备ID
+ @param gwid 网关ID
+ */
+
+- (void)mandun_autotamicTestDevid:(NSInteger )devid gwid:(NSString *)gwid callBack:(success)success failer:(failer)failer;
+```
 
 ## 4.设备类型说明
 ------------------
