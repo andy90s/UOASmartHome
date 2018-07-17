@@ -698,8 +698,7 @@ device\_only_type|string|CurtainSwitch|一路窗帘开关|窗帘面板
 device\_only_type|string|IRTransponder|红外转发器
 device\_only_type|string|AutomaticDoorController|自动门控制器
 device\_only_type|string|MusicPlayer|背景音乐
-
-
+device\_only_type|string|IntelligentOpen|智能空开(曼顿)
 ## 5.状态码
 ------------------
 

@@ -210,7 +210,7 @@ typedef void(^failer)(NSDictionary *jsonDictionary);
  @param devid 设备ID
  @param gwid 网关ID
  @param name 设备名称
- @param addr 曼顿路数
+ @param addr 曼顿空开发生报警时的路数
  @param voltage_min 最小电压
  @param voltage_max 最大电压
  @param current_max 当前电压
