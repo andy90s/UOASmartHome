@@ -672,6 +672,18 @@ index|int|索引
 - (void)mandun_autotamicTestDevid:(NSInteger )devid gwid:(NSString *)gwid callBack:(success)success failer:(failer)failer;
 ```
 
+#### 3.3.25 转换推送信息
+```
+
+/**
+ 转换推送信息
+
+ @param info 由极光推送的设备报警信息
+ @return 转换后信息
+ */
+- (NSDictionary *)convertPushInformation:(NSDictionary *)info;
+```
+
 ## 4.设备类型说明
 ------------------
 返回参数|类别|值|说明|备注
