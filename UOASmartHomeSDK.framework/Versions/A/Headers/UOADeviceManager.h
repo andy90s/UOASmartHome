@@ -20,6 +20,14 @@ typedef void(^failer)(NSDictionary *jsonDictionary);
 
 
 /**
+ 转换推送信息
+
+ @param info 由极光推送的设备报警信息
+ @return 转换后信息
+ */
+- (NSDictionary *)convertPushInformation:(NSDictionary *)info;
+
+/**
  获取设备组列表
  */
 - (void)getDeviceGroupList;
