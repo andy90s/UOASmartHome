@@ -10,6 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+extern NSString *const kUMESmartHomeSpecialNotification; // 特殊的通知消息(单点登录)
+
 typedef void(^success)(NSDictionary *jsonDictionary);
 
 typedef void(^failer)(NSDictionary *jsonDictionary);

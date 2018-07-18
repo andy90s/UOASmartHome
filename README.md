@@ -683,6 +683,13 @@ index|int|索引
  */
 - (NSDictionary *)convertPushInformation:(NSDictionary *)info;
 ```
+参数|类别|说明|备注
+---|---|---|---
+alarm_message|string|报警推送消息
+gateway_id|string|网关ID
+device_id|int|设备ID
+time|string|时间
+stamp|int|时间戳
 
 ## 4.设备类型说明
 ------------------
