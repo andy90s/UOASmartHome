@@ -206,7 +206,7 @@ ts|string|时间戳
 #### 3.2.0 Session过期处理
 ```
 // 在需要处理的地方 注册通知 注意name为 kUMESmartHomeSpecialNotification
-[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi:)name:kUMESmartHomeSpecialNotification object:nil];
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(#<selectorName>#)name:kUMESmartHomeSpecialNotification object:nil];
 
 ```
 
