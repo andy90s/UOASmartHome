@@ -676,7 +676,7 @@ device\_only_type |string|unknown|未知设备
 device\_only_type|string|DoorSensor|门磁
 device\_only_type|string|FireSensor|烟雾报警器
 device\_only_type|string|WaterSensor|水浸探测器
-device\_only_type|string|GasSensor|可燃气体
+device\_only_type|string|GasSensor|可燃气体探测器
 device\_only_type|string|IRSensor|人体红外
 device\_only_type|string|SOS|SOS
 device\_only_type|string|Switch|墙面开关
@@ -699,6 +699,7 @@ device\_only_type|string|IRTransponder|红外转发器
 device\_only_type|string|AutomaticDoorController|自动门控制器
 device\_only_type|string|MusicPlayer|背景音乐
 device\_only_type|string|IntelligentOpen|智能空开(曼顿)
+device\_only_type|string|CarbonMonoxideDetector|一氧化碳探测器
 ## 5.状态码
 ------------------
 
