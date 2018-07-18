@@ -202,6 +202,20 @@ ts|string|时间戳
 ```
 返回参数|类别|说明|备注
 ---|---|---|---
+
+#### 3.2.0 Session过期处理
+```
+// 在需要处理的地方 注册通知 注意name为 kUMESmartHomeSpecialNotification
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tongzhi:)name:kUMESmartHomeSpecialNotification object:nil];
+
+```
+
+返回参数|类别|说明|备注
+---|---|---|---
+error|string|错误信息
+status|int|错误码
+
+
 ### 3.2 网关模块
 #### 3.2.1 网关开网（允许被其他非管理员搜索绑定）
 ```
