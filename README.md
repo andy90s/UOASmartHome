@@ -376,7 +376,7 @@ only_admin|int|是否管理员|1-是0-不是
 ```
 返回参数|类别|说明|备注
 ---|---|---|---
-id	|Int|	设备组idname|	String|	组名称mac|	String|	设备MACtype|	int|	设备类型zonetype	|int	|设备子类型stamp	|int|	设备添加时间gateway|	String	|网关IDgatewayname|	String	|网关别名offline|	Int	|是否在线|1是离线 0是在线status	|JsonObject|	设备状态clusterid|	JsonObject|	in_clusterid	|JsonArray |设备属性out_clusterid	|JsonArray|	设备属性
+id	|Int|	设备组idname|	String|	组名称mac|	String|	设备MACtype|	int|	设备类型标识zonetype	|int	|设备类型副标识stamp	|int|	设备添加时间gateway|	String	|网关IDgatewayname|	String	|网关别名offline|	Int	|是否在线|1是离线 0是在线status	|JsonObject|	设备状态clusterid|	JsonObject|	in_clusterid	|JsonArray |设备属性out_clusterid	|JsonArray|	设备属性
 device\_only_type |string|设备类型|设备类型表见第4条
 #### 3.3.6 搜索设备
 ```
@@ -518,7 +518,7 @@ zonetype|int|空开|空开设备类型属性
 onoff|int|空开|空开开关
 |||
 onoff|int|SOB门锁|
-zonetype|int|SOB门锁|门锁的类型属性
+zonetype|int|SOB门锁|门锁的类型副标识
 
 #### 3.3.12 读取设备历史记录
 ```
