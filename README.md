@@ -514,8 +514,8 @@ temp|int|温湿度|温度
 hum|int|温湿度|湿度
 |||
 addr|int|空开|空开的路数
-zonetype|空开|空开设备类型属性
-onoff|空开|空开开关
+zonetype|int|空开|空开设备类型属性
+onoff|int|空开|空开开关
 |||
 onoff|int|SOB门锁|
 zonetype|int|SOB门锁|门锁的类型属性
