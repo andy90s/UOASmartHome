@@ -269,6 +269,73 @@ typedef void(^failer)(NSDictionary *jsonDictionary);
 - (void)mandun_autotamicTestDevid:(NSInteger )devid gwid:(NSString *)gwid;
 
 - (void)mandun_autotamicTestDevid:(NSInteger )devid gwid:(NSString *)gwid callBack:(success)success failer:(failer)failer;
+
+
+/**
+ 修改智能门锁密码(SOB门锁)
+
+ @param deviceid 设备ID
+ @param usertype 用户类型
+ @param userid 用户ID
+ @param gatewayid 网关ID
+ @param newPasswrod 新的密码
+ */
+- (void)changePasswrodDoorlockDeviceid:(NSInteger )deviceid
+                              usertype:(NSInteger)usertype
+                                userid:(NSInteger )userid
+                             gatewayid:(NSString *)gatewayid
+                           newPassword:(NSString *)newPasswrod;
+
+- (void)changePasswrodDoorlockDeviceid:(NSInteger )deviceid usertype:(NSInteger)usertype userid:(NSInteger )userid gatewayid:(NSString *)gatewayid newPassword:(NSString *)newPasswrod callBack:(success)success failer:(failer)failer;
+
+/**
+ 获取门锁用户列表(SOB门锁)
+
+ @param deviceid 设备ID
+ @param gatewayid 网关标识
+ */
+- (void)getUserListDoorlockDeviceid:(NSInteger )deviceid
+                          gatewayid:(NSString *)gatewayid;
+
+- (void)getUserListDoorlockDeviceid:(NSInteger )deviceid
+                          gatewayid:(NSString *)gatewayid
+                           callBack:(success)success
+                             failer:(failer)failer;
+
+/**
+ 删除门锁用户
+
+ @param deviceid 设备ID
+ @param userid 用户ID
+ @param usertype 用户类型
+ @param gatewayid 网关标识
+ */
+- (void)deleteUserDoorlockDeviceid:(NSInteger )deviceid
+                            userid:(NSInteger )userid
+                          usertype:(NSInteger )usertype
+                         gatewayid:(NSString *)gatewayid;
+
+
+- (void)deleteUserDoorlockDeviceid:(NSInteger )deviceid
+                            userid:(NSInteger )userid
+                          usertype:(NSInteger )usertype
+                         gatewayid:(NSString *)gatewayid
+                          callBack:(success)success
+                            failer:(failer)failer;
+
+/**
+ 门锁记录(SOB)
+
+ @param deviceid 设备ID
+ @param gatewayid 网关标识
+ */
+- (void)getRecordsDoorlockDeviceid:(NSInteger )deviceid
+                         gatewayid:(NSString *)gatewayid;
+
+- (void)getRecordsDoorlockDeviceid:(NSInteger )deviceid
+                         gatewayid:(NSString *)gatewayid
+                          callBack:(success)success
+                            failer:(failer)failer;
 @end
 
 NS_ASSUME_NONNULL_END

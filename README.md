@@ -737,6 +737,8 @@ device\_only_type|string|AutomaticDoorController|自动门控制器
 device\_only_type|string|MusicPlayer|背景音乐
 device\_only_type|string|IntelligentOpen|智能空开(曼顿)
 device\_only_type|string|CarbonMonoxideDetector|一氧化碳探测器
+device\_only_type|string|SOBDoorLock|SOB门锁
+device\_only_type|string|EGGDoorLock|蛋贝门锁
 ## 5.状态码
 ------------------
 
