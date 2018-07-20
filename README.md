@@ -448,7 +448,7 @@ device\_only_type |string|设备类型|设备类型表见第4条
 
 - (void)getDeviceStatus:(NSInteger )deviceId gateway:(NSString *)gateway CallBack:(success)success failer:(failer)failer;
 ```
-返回参数|类别|说明|备注
+返回参数|类别|设备|备注
 ---|---|---|---
 onoff|int|开关灯|0表示关 1表示开(所有设备onoff均是)
 |||
@@ -471,7 +471,14 @@ time|int|窗帘|渐变延时
 temp|int|温湿度|温度
 hum|int|温湿度|湿度
 |||
-
+name|string|空开|设备名
+addr|int|空开|开关路数
+voltage|int|空开|电压
+current|int|空开|电流
+leakage_current|int|空开|漏电流
+temperature|int|空开|温度
+power|int|空开|功率
+onoff|int|空开|开关状态
 
 
 #### 3.3.11 控制设备
