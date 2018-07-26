@@ -715,8 +715,108 @@ device_id|int|设备ID
 time|string|时间
 stamp|int|时间戳
 
-## 4.设备类型说明
 ------------------
+### 3.4 网关模块
+
+### 3.4.1 获取场景列表
+```
+/**
+ 获取场景列表
+ */
+- (void)getSceneListCallBack:(success)success failer:(failer)failer;
+
+```
+
+### 3.4.2 添加场景
+```
+/**
+ 添加场景
+
+ @param name 场景名称
+ @param conditions 启动条件
+ @param results 结果条件
+ @param recResults 执行条件
+ */
+
+- (void)addSceneWithName:(NSString *)name
+              conditions:(NSDictionary *)conditions
+                 results:(NSDictionary *)results
+              recResults:(NSDictionary *)recResults
+                callBack:(success)success
+                  failer:(failer)failer;
+```
+
+参数|类别|说明|备注
+---|---|---|---
+devices|array|设备列表
+modes|array|场景列表
+type|int|1定时2延时
+modes|array|其他场景
+条件实例:
+
+```
+{
+    "devices":[{
+        "id":1,
+        "gateway":"xxxxxxx",
+        "command":{"onoff":1}
+    }，。。。],
+    "modes":[{"id":1},{"id":2}]
+    "time":{"type":1,"value":xxx}，
+}  
+```	
+
+### 3.4.3 删除场景
+
+```
+/**
+ 删除场景
+
+ @param sceneid 场景ID
+ */
+
+
+- (void)deleteSceneWithID:(NSInteger )sceneid callBack:(success)success failer:(failer)failer;
+```
+
+### 3.5.4 控制场景
+```
+/**
+ 控制场景
+
+ @param sceneid 场景ID
+ @param onoff 开关
+ */
+
+
+- (void)controlSceneWithID:(NSInteger )sceneid onoff:(NSInteger )onoff callBack:(success)success failer:(failer)failer;
+```
+
+### 3.5.5 修改场景
+```
+/**
+ 修改场景
+
+ @param name 场景名称
+ @param sceneid 场景ID
+ @param conditions 启动条件
+ @param results 结束条件
+ @param recResults 执行条件
+ */
+
+- (void)editSceneWithName:(NSString *)name
+                  sceneid:(NSInteger )sceneid
+               conditions:(NSDictionary *)conditions
+                  results:(NSDictionary *)results
+               recResults:(NSDictionary *)recResults
+                 callBack:(success)success
+                   failer:(failer)failer;
+```
+
+## 4.设备类型说明
+
+------------------
+
 返回参数|类别|值|说明|备注
 ---|---|---|---|---
 device\_only_type |string|unknown|未知设备
