@@ -35,7 +35,14 @@ typedef void(^failer)(NSDictionary *jsonDictionary);
                  results:(NSDictionary *)results
               recResults:(NSDictionary *)recResults;
 
-- (void)addSceneWithName:(NSString *)name conditions:(NSDictionary *)conditions results:(NSDictionary *)results recResults:(NSDictionary *)recResults callBack:(success)success failer:(failer)failer;
+- (void)addSceneWithName:(NSString *)name
+              conditions:(NSDictionary *)conditions
+                 results:(NSDictionary *)results
+              recResults:(NSDictionary *)recResults
+                callBack:(success)success
+                  failer:(failer)failer;
+
+
 
 /**
  删除场景
@@ -71,7 +78,13 @@ typedef void(^failer)(NSDictionary *jsonDictionary);
                   results:(NSDictionary *)results
                recResults:(NSDictionary *)recResults;
 
-- (void)editSceneWithName:(NSString *)name sceneid:(NSInteger )sceneid conditions:(NSDictionary *)conditions results:(NSDictionary *)results recResults:(NSDictionary *)recResults callBack:(success)success failer:(failer)failer;
+- (void)editSceneWithName:(NSString *)name
+                  sceneid:(NSInteger )sceneid
+               conditions:(NSDictionary *)conditions
+                  results:(NSDictionary *)results
+               recResults:(NSDictionary *)recResults
+                 callBack:(success)success
+                   failer:(failer)failer;
 
 @end
 NS_ASSUME_NONNULL_END

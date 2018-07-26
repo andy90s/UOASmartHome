@@ -752,7 +752,8 @@ devices|array|设备列表
 modes|array|场景列表
 type|int|1定时2延时
 modes|array|其他场景
-条件实例:
+
+条件字典实例:
 
 ```
 {
