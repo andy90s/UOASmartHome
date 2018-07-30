@@ -115,6 +115,16 @@ typedef void(^failer)(NSDictionary *jsonDictionary);
 - (void)logout:(NSString *)userName;
 
 - (void)logout:(NSString *)userName callBack:(success)success failer:(failer)falier;
+
+/**
+ 获取用户信息
+
+ @param username jsonString
+ */
+- (void)getUserInfoWithUserName:(NSString *)username;
+
+- (void)getUserInfoWithUserName:(NSString *)username callBack:(success)success failer:(failer)falier;
+
 @end
 
 NS_ASSUME_NONNULL_END
