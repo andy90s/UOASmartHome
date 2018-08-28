@@ -39,8 +39,11 @@ CoreData.framework
 Build Settings -> Other Linker Flags 中添加 `-ObjC`
 
 如果项目支持cocoapods，在podfile文件中配置
+
 ```
-pod 'UOASmartHomeSDK',:git => 'https://github.com/andy90s/UOASmartHome.git'
+source 'https://github.com/andy90s/UMESpecs.git'
+
+pod 'UOASmartHomeSDK'
 ```
 执行`podupdate`即可完成集成。
 ### 2.2 初始化SDK
