@@ -125,6 +125,15 @@ typedef void(^failer)(NSDictionary *jsonDictionary);
 
 - (void)getUserInfoWithUserName:(NSString *)username callBack:(success)success failer:(failer)falier;
 
+/**
+ 获取用户天气
+
+ @param city 城市
+ */
+- (void)getUserWeatherWithCity:(NSString *)city;
+
+- (void)getUserWeatherWithCity:(NSString *)city callBack:(success)success failer:(failer)falier;
+
 @end
 
 NS_ASSUME_NONNULL_END
