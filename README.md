@@ -854,6 +854,7 @@ device\_only_type|string|CarbonMonoxideDetector|一氧化碳探测器
 device\_only_type|string|SOBDoorLock|SOB门锁
 device\_only_type|string|EGGDoorLock|蛋贝门锁
 device\_only_type|string|UDSDoorLock|友迪斯门锁
+device\_only_type|string|ThirdPartyDoorLock|所有的第三方门锁统一类型(用于报警消息统一) 
 ## 5.状态码
 ------------------
 
