@@ -717,6 +717,7 @@ gateway_id|string|网关ID
 device_id|int|设备ID
 time|string|时间
 stamp|int|时间戳
+device_name|string|设备名称
 
 ------------------
 ### 3.4 网关模块
