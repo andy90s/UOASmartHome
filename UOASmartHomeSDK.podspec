@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = "UOASmartHomeSDK"
-  s.version = "0.8.4"
+  s.version = "0.8.5"
   s.summary = "umeinfo open api"
   s.license = {"type"=>"MIT", "file"=>"LICENSE"}
   s.authors = {"andy90s"=>"909901234@qq.com"}
