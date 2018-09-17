@@ -551,7 +551,18 @@ device_id|int|设备ID|
 device_type|string|设备类型|
 stamp|int|时间戳
 index|int|索引
-#### 3.3.13 添加新的撤布防组
+#### 3.3.13 获取所有未添加撤布防分组的红外&门磁设备
+```
+/**
+ 获取账号下所有没有加入撤布防组的红外门磁设备
+ */
+
+
+- (void)getUnbindProtectionDevicesCallBack:(success)success failer:(failer)failer;
+```
+参数|类别|说明|备注
+---|---|---|---
+#### 3.3.14 添加新的撤布防组
 ```
 /**
  添加新的撤布防组
@@ -563,7 +574,7 @@ index|int|索引
 
 - (void)addProtectionGroupWithName:(NSString *)groupName devices:(NSArray <NSDictionary *>*)devices callBack:(success)success failer:(failer)failer;
 ```
-#### 3.3.14  获取账号下所有撤布防组设备
+#### 3.3.15  获取账号下所有撤布防组设备
 ```
 /**
  获取账号下所有撤布防组设备
@@ -573,7 +584,7 @@ index|int|索引
 
 ```
 
-#### 3.3.15 撤布防组的控制(撤防/布防)
+#### 3.3.16 撤布防组的控制(撤防/布防)
 ```
 /**
  撤布防组的控制(撤防/布防)
@@ -585,7 +596,7 @@ index|int|索引
 - (void)removalOrProtectionWithGroupID:(NSInteger )groupID status:(NSInteger )status callBack:(success)success failer:(failer)failer;
 ```
 
-#### 3.3.16 删除撤布防分组
+#### 3.3.17 删除撤布防分组
 ```
 /**
  删除撤布防分组
@@ -596,7 +607,7 @@ index|int|索引
 - (void)deleteProtectionGroup:(NSInteger )groupID callBack:(success)success failer:(failer)failer;
 ```
 
-#### 3.3.17 修改撤布防分组
+#### 3.3.18 修改撤布防分组
 ```/**
  修改撤布防分组
 
@@ -607,7 +618,7 @@ index|int|索引
 
 - (void)editProtectionGroup:(NSString *)groupName groupID:(NSInteger )groupID devices:(NSArray <NSDictionary *>*)devices callBack:(success)success failer:(failer)failer;
 ```
-#### 3.3.18 曼顿空开读取实时参数
+#### 3.3.19 曼顿空开读取实时参数
 ```
 /**
  曼顿空开读取实时参数
@@ -619,7 +630,7 @@ index|int|索引
 - (void)mandun_ammeterInformationGateWay:(NSString*)gateWay device_id:(NSInteger )device_id callBack:(success)success failer:(failer)failer;
 ```
 
-#### 3.3.19 曼顿空开电量统计信息
+#### 3.3.20 曼顿空开电量统计信息
 ```
 /**
  曼顿空开电量统计信息
@@ -630,7 +641,7 @@ index|int|索引
  
 - (void)mandun_ammeterStatisticsInformation:(NSString*)gateWay device_id:(NSInteger )device_id callBack:(success)success failer:(failer)failer;
 ```
-#### 3.3.20  曼顿空开设置配置参数
+#### 3.3.21  曼顿空开设置配置参数
 ```
 /**
  曼顿空开设置配置参数
@@ -647,7 +658,7 @@ index|int|索引
  
  - (void)mandun_ammeterConfigurationParametersDevid:(NSInteger )devid gwid:(NSString *)gwid name:(NSString *)name addr:(NSInteger)addr voltage_min:(NSInteger)voltage_min voltage_max:(NSInteger)voltage_max current_max:(NSInteger)current_max power_max:(NSInteger )power_max callBack:(success)success failer:(failer)failer;
 ```
-#### 3.3.21 曼顿空开自动检测
+#### 3.3.22 曼顿空开自动检测
 ```
 /**
  曼顿空开自动检测
@@ -661,7 +672,7 @@ index|int|索引
 - (void)mandun_ammeterConfigurationParametersDevid:(NSInteger )devid gwid:(NSString *)gwid mode:(NSInteger )mode time:(NSInteger)time callBack:(success)success failer:(failer)failer;
 ```
 
-#### 3.3.22 曼顿空开读取配置参数
+#### 3.3.23 曼顿空开读取配置参数
 ```
 /**
  曼顿空开读取配置参数
@@ -674,7 +685,7 @@ index|int|索引
 - (void)mandun_readAmmeterConfigurationParameterDevid:(NSInteger )devid gwid:(NSString *)gwid callBack:(success)success failer:(failer)failer;
 ```
 
-#### 3.3.23 手动检测曼顿设备
+#### 3.3.24 手动检测曼顿设备
 ```
 /**
  手动检测曼顿设备
@@ -687,7 +698,7 @@ index|int|索引
 - (void)mandun_manualTestDevid:(NSInteger )devid gwid:(NSString *)gwid callBack:(success)success failer:(failer)failer;
 ```
 
-#### 3.3.24 自动检测曼顿设备
+#### 3.3.25 自动检测曼顿设备
 ```
 /**
  自动检测曼顿设备
@@ -699,7 +710,7 @@ index|int|索引
 - (void)mandun_autotamicTestDevid:(NSInteger )devid gwid:(NSString *)gwid callBack:(success)success failer:(failer)failer;
 ```
 
-#### 3.3.25 转换推送信息
+#### 3.3.26 转换推送信息
 ```
 
 /**

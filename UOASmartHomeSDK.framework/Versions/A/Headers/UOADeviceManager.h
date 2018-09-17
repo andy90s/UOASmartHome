@@ -142,6 +142,12 @@ typedef void(^failer)(NSDictionary *jsonDictionary);
 
 - (void)getDeviceRecordsWithDeviceID:(NSInteger )deviceID gatewayID:(NSString *)gatewayID start:(NSInteger )start cnt:(NSInteger )cnt callBack:(success)success failer:(failer)failer;
 
+/**
+ 获取账号下所有没有加入撤布防组的红外门磁设备
+ */
+- (void)getUnbindProtectionDevices;
+
+- (void)getUnbindProtectionDevicesCallBack:(success)success failer:(failer)failer;
 
 /**
  添加新的撤布防组
