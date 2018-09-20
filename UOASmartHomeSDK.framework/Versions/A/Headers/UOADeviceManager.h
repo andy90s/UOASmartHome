@@ -342,6 +342,62 @@ typedef void(^failer)(NSDictionary *jsonDictionary);
                          gatewayid:(NSString *)gatewayid
                           callBack:(success)success
                             failer:(failer)failer;
+
+/**
+  获取关联开关组
+ */
+- (void)getAssocationGroups;
+
+- (void)getAssocationGroupsCallBack:(success)success
+                             failer:(failer)failer;
+
+/**
+ 获取可用关联开关
+ */
+- (void)getAssociationList;
+
+- (void)getAssociationListCallBack:(success)success
+                            failer:(failer)failer;
+
+/**
+ 添加关联组
+
+ @param body dic
+ */
+- (void)addAssociation:(NSDictionary *)body;
+
+- (void)addAssociation:(NSDictionary *)body callBack:(success)success
+                failer:(failer)failer;
+
+/**
+ 删除关联组
+
+ @param numid 组id
+ */
+- (void)deleteAssociation:(NSInteger )numid;
+
+- (void)deleteAssociation:(NSInteger )numid callBack:(success)success
+                   failer:(failer)failer;
+
+/**
+ 修改关联组
+
+ @param body dic
+ */
+- (void)changeAssociation:(NSDictionary *)body;
+
+- (void)changeAssociation:(NSDictionary *)body callBack:(success)success
+                   failer:(failer)failer;
+
+/**
+ 控制关联组
+
+ @param numid 组ID
+ @param status 控制指令开关
+ */
+- (void)controlAssociation:(NSInteger)numid status:(NSInteger)status;
+
+- (void)controlAssociation:(NSInteger)numid status:(NSInteger)status callBack:(success)success failer:(failer)failer;
 @end
 
 NS_ASSUME_NONNULL_END
