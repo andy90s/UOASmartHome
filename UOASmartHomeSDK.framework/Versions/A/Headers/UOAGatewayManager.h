@@ -32,11 +32,22 @@ typedef void(^failer)(NSDictionary *jsonDictionary);
 - (void)allowsScanGateway:(NSString *)gateway callBack:(success)success failer:(failer)falier;
 
 /**
- 搜索网关
+ 搜索网关(本地局域网搜索)
  */
 - (void)searchGateway;
 
 - (void)searchGatewaycallBack:(success)success failer:(failer)falier;
+
+
+/**
+ 二维码搜索网关/设备(通过服务器)
+
+ @param type 搜索类型(网关:@"gateway" 设备:@"device")
+ @param value 扫描的二维码结果
+ */
+- (void)searchByQR:(NSString *)type value:(NSString *)value;
+
+- (void)searchByQR:(NSString *)type value:(NSString *)value callBack:(success)success failer:(failer)falier;
 
 /**
  绑定网关
@@ -94,6 +105,21 @@ typedef void(^failer)(NSDictionary *jsonDictionary);
 
 - (void)eliminateWarningCallBack:(success)success failer:(failer)falier;
 
+/**
+ 搜索可关联WiFi
+ */
+- (void)searchAssociationWifi;
+
+- (void)searchAssociationWifiCallBack:(success)success failer:(failer)falier;
+
+/**
+ 网关桥接
+
+ @param wifi 搜索到的WiFi的详细信息 @{@"BSSID":@"",@"ESSID":@"",@"Channel":@"",@"Encryption":@""};
+ */
+- (void)gatewayBridgeWithWifiInfo:(NSDictionary *)wifi password:(NSString *)pwd;
+
+- (void)gatewayBridgeWithWifiInfo:(NSDictionary *)wifi password:(NSString *)pwd callBack:(success)success failer:(failer)falier;
 @end
 
 NS_ASSUME_NONNULL_END
