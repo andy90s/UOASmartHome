@@ -52,12 +52,12 @@ pod 'UOASmartHomeSDK'
 添加SDK初始化方法
 
 ```
+/// 注:AppKey 为分配的服务器地址
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [UMInfoOpenAPI initWithAppKey:@"AppKey"];
     return YES;
 }
-
 ```
 **初始化只需要在程序启动时初始化一次即可。**
 
@@ -74,8 +74,9 @@ pod 'UOASmartHomeSDK'
 
  @param userName 用户名
  @param password 密码
+ @param license 分配的license字符串 (当为license登录时password为空)
  */
-- (void)loginUserName:(NSString *)userName password:(NSString *)password callBack:(success)success failer:(failer)falier;
+- (void)loginUserName:(NSString *)userName password:(NSString *)password license:(NSString *)license callBack:(success)success failer:(failer)falier;
 ```
 返回参数|类别|说明|备注
 ---|---|---|---
